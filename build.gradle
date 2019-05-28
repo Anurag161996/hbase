@@ -1,0 +1,28 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.5.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compile 'org.springframework.data:spring-data-hadoop:2.5.0.RELEASE'
+	compile 'org.apache.hbase:hbase:2.0.0'
+    compile('org.apache.hbase:hbase-client:2.0.0'){
+    exclude group :'log4j',module:'log4j'
+    exclude group :'org.slf4j',module:'slf4j-log4j12'
+    exclude group: 'javax.servlet', module: 'servlet-api'
+    }
+    compile('org.springframework.boot:spring-boot-starter-tomcat')
+    //compile('org.springframework.boot:spring-boot-configuration-processor')
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}

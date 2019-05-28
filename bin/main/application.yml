@@ -1,0 +1,7 @@
+server:
+  port: 8001
+  
+hbase:
+    zkQuorum: zk4-mrcoop.xaxchoats1yudhgk5ooiip4flg.gx.internal.cloudapp.net,zk2-mrcoop..gx.internal.cloudapp.net,zk1-mrcoop.xaxchoats1yudhgk5ooiip4flg.gx.internal.cloudapp.net
+    zkBasePath: /hbase-unsecurexaxchoats1yudhgk5ooiip4flg
+    rootDir: /hbase
