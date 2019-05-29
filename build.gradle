@@ -16,8 +16,9 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compile 'org.springframework.data:spring-data-hadoop:2.5.0.RELEASE'
-	compile 'org.apache.hbase:hbase:2.0.0'
-    compile('org.apache.hbase:hbase-client:2.0.0'){
+	compile 'org.apache.hbase:hbase:1.1.7'
+	//compile group: 'org.apache.phoenix', name: 'phoenix-core', version: '4.13.1-HBase-1.1'
+    compile('org.apache.hbase:hbase-client:1.1.7'){
     exclude group :'log4j',module:'log4j'
     exclude group :'org.slf4j',module:'slf4j-log4j12'
     exclude group: 'javax.servlet', module: 'servlet-api'
